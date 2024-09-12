@@ -8,6 +8,14 @@
 
 /* Element Selectors */
 
+span {
+  color: red;
+  text-decoration: line-through;
+}
+
+footer h6 a {
+  text-decoration: none;
+}
 /* Class Selectors */
 
 /* Unique Identifier Selectors */

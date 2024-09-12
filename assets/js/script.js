@@ -2,18 +2,25 @@
 
 const form = document.getElementById("userinfo");
 
-let consumerData = [];
+function consumerData() {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault(); // prevent default form submission
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault(); // prevent default form submission
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
 
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
+    localStorage.setItem("Name:", name);
+    localStorage.setItem("Email:", email);
 
-  //Do something with the form data, e.g., send it to server
-  console.log("Name:", name);
-  console.log("Email:", email);
-});
+    //Do something with the form data, e.g., send it to server
+    console.log("Name:", name);
+    console.log("Email:", email);
+  });
+
+  return;
+}
+
+consumerData();
 
 // will perform the fetch of all products from fakestore.. other apis as needed
 // create and return array of product objects
