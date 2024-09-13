@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   font-size: 16px;
   display: flex;
@@ -93,3 +94,18 @@ footer {
     flex-direction: column;
   }
 }
+=======
+/* style index html */
+
+/* Universal Selector */
+
+* {
+  background-color: limegreen;
+}
+
+/* Element Selectors */
+
+/* Class Selectors */
+
+/* Unique Identifier Selectors */
+>>>>>>> main
