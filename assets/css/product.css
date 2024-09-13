@@ -8,14 +8,32 @@
 
 /* Element Selectors */
 
-span {
-  color: red;
-  text-decoration: line-through;
-}
-
 footer h6 a {
   text-decoration: none;
 }
 /* Class Selectors */
 
+.clearance {
+  color: red;
+  text-decoration: line-through;
+}
+
+.boldit {
+  font-weight: bolder;
+}
+
 /* Unique Identifier Selectors */
+
+#buynow {
+  font-weight: bolder;
+  color: red;
+}
+
+#joker {
+  color: blue;
+}
+
+#theft {
+  font-size: 8px;
+  color: red;
+}
