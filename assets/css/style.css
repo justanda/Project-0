@@ -1,7 +1,5 @@
-/* style index html  */
-
+/*-style index html  */
 /* Universal Selector */
-
 * {
   background-color: rgb(240, 249, 151);
 }
@@ -35,7 +33,5 @@ header {
   justify-content: right;
 }
 /* Element Selectors */
-
 /* Class Selectors */
-
 /* Unique Identifier Selectors */
