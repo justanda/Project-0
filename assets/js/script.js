@@ -5,17 +5,49 @@ console.log("project-0");
 
 
 
-// FORMERLY API JS
-// holds api
+function getProducts(){
 
-// will perform the fetch of all products from fakestore.. other apis as needed
-// create and return array of product objects
-// other API functions
+ fetch("http://fakestoreapi.com/products")
+  .then(function (response) {
+    return response.json(); //into the format of data we can use
+  })
+  .then(function (data) {
+    //data = [20 objects]
+    console.log(data);
+    for (let i = 0; i < data.length; i++) {
+      //DOM MANIPULATION
+      //create an LI for each object
+      const liEl = document.createElement("li");
+ 
+      //Create an element
+      //Do something with that element
+      //add text content to each LI
+      liEl.textContent = data[i].title;
+  
+      //append to DOM
+      ulEl.appendChild(liEl);
+    }
+  })
+  .catch(function (err) {
+    console.log(err);
+  });
 
-fetch( "https://fakestoreapi.com/products" )
-        .then( (response) => response.json() )
-        //.then((response) => response.json())
-        .then( (json) => console.log(json) )
+}
+getProducts();
+
+//fetch( "https://fakestoreapi.com/products" ) 
+//            .then( (response) => response.json() )
+            //.then((response) => response.json())`1
+ //           .then( (json) => console.log(json) );
+
+//const jsProductVariable = JSON.parse(jsonObj);
+//console.log(typeof(jsonObj));
+//console.log(JSON.parse(jsonObj));
+
+
+//fetch()
+
+//const ulEl = document.getElementById("product-title");
 
 
 // PSEUDO CODE
@@ -24,13 +56,7 @@ fetch( "https://fakestoreapi.com/products" )
 //const productsArr[];
 
 // declare product object { }
-//const product = {
-//    id: "", //fakestore unique id
-//    title: "", //fakestore title
-//    category: "", //fakestore category
-//    description: "", //fakestore description
-//    image: "" //img url
-//}
+
 
 // declare function to retrieve products from api
 //function getFromAPI(){ 
