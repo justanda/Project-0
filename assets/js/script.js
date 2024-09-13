@@ -3,37 +3,19 @@
 console.log("project-0");
 
 
+// a function to check the uniqueness of an element
 
-
-function getProducts(){
-
- fetch("http://fakestoreapi.com/products")
+  fetch("http://fakestoreapi.com/products")
   .then(function (response) {
     return response.json(); //into the format of data we can use
   })
   .then(function (data) {
     //data = [20 objects]
     console.log(data);
-    for (let i = 0; i < data.length; i++) {
-      //DOM MANIPULATION
-      //create an LI for each object
-      const liEl = document.createElement("li");
- 
-      //Create an element
-      //Do something with that element
-      //add text content to each LI
-      liEl.textContent = data[i].title;
-  
-      //append to DOM
-      ulEl.appendChild(liEl);
-    }
-  })
-  .catch(function (err) {
-    console.log(err);
-  });
 
-}
-getProducts();
+
+
+
 
 //fetch( "https://fakestoreapi.com/products" ) 
 //            .then( (response) => response.json() )
@@ -129,6 +111,64 @@ getProducts();
 
 
 // for cart html (formerly cart.js)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
