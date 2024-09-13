@@ -29,7 +29,16 @@
           alt="Penny Pinchers Logo"
         />
       </a>
-      <nav class="dropdown">
+      <form id="userinfo">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" /><br /><br />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" /><br /><br />
+
+        <button type="submit">Submit</button>
+      </form>
+      <nav class="dropdown" id="catNav" s>
         <button
           class="dropdown-toggle"
           type="button"
@@ -46,6 +55,13 @@
       </nav>
     </header>
     <main>
+      <div id="products">
+        <section class="card">
+          <header>Camera</header>
+          <img src="./assets/images/camera.jpg" alt="camera" />
+          <p>Price: $300</p>
+        </section>
+      </div>
       <div>
         <section class="product-card">
           <h2>CARD</h2>
