@@ -98,33 +98,26 @@ function getProducts() {
    function createCategoryNav(){
 
     // fetch product records
-    fetch("http://fakestoreapi.com/products")
+    fetch("http://fakestoreapi.com/products/categories")
      .then(function (response) {
        return response.json(); //into the format of data we can use
      })
      .then(function (data) {
-       console.log(data);    //data = [20 objects]
-   
+      console.log("have data")
+       console.log(data);
+
        // get the html target on index.html
        const navEl = document.getElementById("catNav");
        console.log("navEl")
-       // loop values returned
-       const item = [];
+       // loop values return
        for (let i = 0; i < data.length; i++) {
 
-        item[i] = data[i].category;
-        console.log(item[i])
-        console.log(item.length);
-
         // create section element
-         const ulEl = document.createElement("ul");
-         ulEl.setAttribute("class","navUl");
-         navEl.appendChild(ulEl); //append to dom
-
-         const liEl = document.createElement("li");
-         liEl.setAttribute("class","navLi");
-         liEl.textContent = data[i].category;
-         ulEl.appendChild(liEl);
+         const sEl = document.createElement("a");
+         sEl.setAttribute("class","navLi");
+         sEl.setAttribute("href","javascript:location.reload()")
+         sEl.textContent = data[i] + " | ";
+         navEl.appendChild(sEl);
 
        }
      })
@@ -134,5 +127,6 @@ function getProducts() {
    
    }
 
+   createCategoryNav();
    getProducts();
-   //createCategoryNav();
+   
