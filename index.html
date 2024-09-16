@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="auto">
   <head>
+    flex-direction: column;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project-0</title>
@@ -149,7 +150,7 @@
     <div class="container-fluid py-3">
       <header class="Head d-flex justify-content-evenly align-items-center">
         <div
-          class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom"
+          class="d-flex flex-column align-items-center pb-3 mb-4 border-bottom"
         >
           <a href="./index.html">
             <img
@@ -161,33 +162,44 @@
           </a>
 
           <h1>Penny <span style="color: burlywood">Pinchers</span></h1>
-          <form id="userinfo">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" /><br /><br />
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" /><br /><br />
-
-            <button type="submit">Submit</button>
-          </form>
-          <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+         
+          <nav class="d-inline-flex">
             <a
-              class="me-3 py-2 link-body-emphasis text-decoration-none"
+              class="me-3 pb-4 link-body-emphasis text-decoration-none"
               href="#"
-              >Home</a
+              ><span style="color: burlywood">Home</span></a
             >
             <a
-              class="me-3 py-2 link-body-emphasis text-decoration-none"
+              class="me-3 link-body-emphasis text-decoration-none"
               href="./product.html"
-              >Products</a
+              ><span style="color: burlywood">Products</span></a
             >
 
             <a
-              class="py-2 link-body-emphasis text-decoration-none"
+              class="me-3 link-body-emphasis text-decoration-none"
               href="./cart.html"
-              >Checkout</a
+              ><span style="color: burlywood">Checkout</span></a
             >
           </nav>
+
+          <form id="userinfo">
+
+            <span style="color: burlywood"><label for="name">Name:</label></span>
+            <div class="text-center">
+            <input type="text" id="name" name="name" /><br /><br />
+            </div>
+
+            <span style="color: burlywood"><label for="email">Email:</label></span>
+            <div class="text-center">
+            <input type="email" id="email" name="email" /><br /><br />
+            </div>
+
+            <div class="text-center">
+            <button type="submit">Submit</button>
+            </div>
+
+          </form>
+
         </div>
       </header>
       <main>
