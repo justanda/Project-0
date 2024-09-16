@@ -6,12 +6,12 @@
   --mocha: #3c280d;
 }
 
+/* Universal Selector */
+
 * {
   margin: 0;
   padding: 0;
 }
-
-/* Universal Selector */
 
 /* Element Selectors */
 
@@ -103,7 +103,7 @@ main section ul li {
 }
 
 img {
-  height: 400px;
+  height: 600px;
   width: 400px;
 }
 
