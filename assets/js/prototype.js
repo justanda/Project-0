@@ -10,13 +10,20 @@ function addToCart(id){
 function getProducts() {
 
     // fetch product records
-    fetch("http://fakestoreapi.com/products")
+    fetch("https://fakestoreapi.com/products")
      .then(function (response) {
        return response.json(); //into the format of data we can use
      })
      .then(function (data) {
        console.log(data);    //data = [20 objects]
    
+
+       // get filter from local storage
+       // call api
+
+
+
+
        // get the html target on index.html
        const productsEl = document.getElementById("products");
         console.log("productsEl");
@@ -98,7 +105,7 @@ function getProducts() {
    function createCategoryNav(){
 
     // fetch product records
-    fetch("http://fakestoreapi.com/products/categories")
+    fetch("https://fakestoreapi.com/products/categories")
      .then(function (response) {
        return response.json(); //into the format of data we can use
      })
