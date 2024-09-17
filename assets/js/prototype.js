@@ -8,7 +8,7 @@ function addToCart(id) {
 //fetch products
 function getProducts() {
   // fetch product records
-  fetch("http://fakestoreapi.com/products")
+  fetch("https://fakestoreapi.com/products")
     .then(function (response) {
       return response.json(); //into the format of data we can use
     })
