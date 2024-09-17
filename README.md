@@ -2,7 +2,7 @@
 
 ## Description
 
-The purpose of Project-0 is to create pseudo eCommerce webpage with the purpose of learning the very basics of starting a career in software development.
+The purpose of Project-0 is to create a pseudo eCommerce webpage with the purpose of learning the very basics of starting a career in software development.
 
 ## Installation
 
