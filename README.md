@@ -14,7 +14,7 @@ This webpage can be used to showcase the skills we developed in the first 3 week
 
 ## Credits
 
-https://fakestoreapi.com/ (open source api) / Seth D Joslin / Justanda / jfmorganti / DevonOline
+https://fakestoreapi.com/ (open source api) / Seth D Joslin / Justanda / jfmorganti / DevonOline / https://getbootstrap.com/ (open source styling)
 
 ## License
 
