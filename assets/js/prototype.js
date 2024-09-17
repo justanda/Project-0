@@ -3,12 +3,51 @@ console.log("prototype.js");
 //fetch products
 function addToCart(id) {
   console.log("add to cart: " + id);
+  localStorage.setItem("targetId", id);
+
+  let url = "https://fakestoreapi.com/products/" + id;
+  fetch(url)
+    .then(function (response) {
+      return response.json(); //into the format of data we can use
+    })
+    .then(function (data) {
+      console.log(data);
+    });
+}
+
+// get details about a single product
+function getProductDetails() {
+  console.log("getProductDetails()");
+  let id = localStorage.getItem("targetId");
+  console.log("targetId: " + id);
+  let url = "https://fakestoreapi.com/products/" + id;
+  fetch(url)
+    .then(function (response) {
+      return response.json(); //into the format of data we can use
+    })
+    .then(function (data) {
+      console.log(data);
+      //console.log(data.title);
+
+      //let t = document.getElementById("title");
+      //t.textContent = data.title;
+      //console.log(data.title);
+    });
 }
 
 //fetch products
-function getProducts() {
+function getProducts(filter) {
+  // get product filter
+  let url = "https://fakestoreapi.com/products";
+  console.log(filter);
+
+  if (filter != "all") {
+    url = "https://fakestoreapi.com/products/category/" + filter;
+  }
+  console.log("api call:" + url);
+
   // fetch product records
-  fetch("https://fakestoreapi.com/products")
+  fetch(url)
     .then(function (response) {
       return response.json(); //into the format of data we can use
     })
@@ -17,6 +56,7 @@ function getProducts() {
 
       // get the html target on index.html
       const productsEl = document.getElementById("products");
+      productsEl.innerHTML = ""; //reset
       console.log("productsEl");
 
       // loop values returned
@@ -62,7 +102,12 @@ function getProducts() {
         const dscEl = document.createElement("p");
         dscEl.setAttribute("class", "description");
         dscEl.textContent = data[i].description;
-        cEl.appendChild(dscEl);
+        //cEl.appendChild(dscEl);
+
+        //const aEl = document.createElement("a");
+        //aEl.setAttribute("href","./product.html?id="+data[i].id);
+        //aEl.textContent = "Read more";
+        //cEl.appendChild(aEl);
 
         //add button for add to cart
         const btnEl = document.createElement("button");
@@ -90,21 +135,29 @@ function createCategoryNav() {
       return response.json(); //into the format of data we can use
     })
     .then(function (data) {
-      console.log("have data");
       console.log(data);
 
       // get the html target on index.html
       const navEl = document.getElementById("catNav");
-      console.log("navEl");
+      navEl.setAttribute("style", "text-align:center; padding:10px;");
+      let seEl = document.createElement("a");
+      seEl.setAttribute("class", "navLi");
+      seEl.setAttribute("href", 'javascript:getProducts("all")');
+      //seEl.setAttribute("style","margin-left:5px;")
+      seEl.textContent = "all products";
+      navEl.appendChild(seEl);
       // loop values return
       for (let i = 0; i < data.length; i++) {
         // create section element
-        const sEl = document.createElement("a");
+        let sEl = document.createElement("a");
         sEl.setAttribute("class", "navLi");
-        sEl.setAttribute("href", "javascript:location.reload()");
-        sEl.textContent = data[i] + " | ";
+        sEl.setAttribute("href", 'javascript:getProducts("' + data[i] + '")');
+        sEl.setAttribute("style", "padding-left:15px;");
+        sEl.textContent = data[i];
         navEl.appendChild(sEl);
       }
+
+      // remove filter
     })
     .catch(function (err) {
       console.log(err);
@@ -112,4 +165,12 @@ function createCategoryNav() {
 }
 
 createCategoryNav();
-getProducts();
+getProducts("all");
+//getProductDetails();
+//addButton.addEventListener('click', function () {
+// if (count < 24) {
+//   count++;
+//   counter.textContent = count;
+//   localStorage.setItem('count', count);
+// }
+// });
