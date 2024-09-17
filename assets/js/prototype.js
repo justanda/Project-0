@@ -155,6 +155,7 @@ function createCategoryNav() {
         sEl.setAttribute("style", "padding-left:15px;");
         sEl.textContent = data[i];
         navEl.appendChild(sEl);
+        console.log("createNAV: "+data[i]);
       }
 
       // remove filter
