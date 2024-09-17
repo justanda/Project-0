@@ -1,4 +1,4 @@
--<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-bs-theme="auto">
   <head>
     <meta charset="UTF-8" />
@@ -13,7 +13,7 @@
       content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
     />
     <meta name="generator" content="Hugo 0.122.0" />
-    <title>Pricing example · Bootstrap v5.3</title>
+    <title>Penny Pinchers | Save a dollar shopping with us</title>
 
     <!-- <link
       rel="canonical"
@@ -40,8 +40,9 @@
     <script src="./assets/js/color-modes.js"></script>
     <link href="./assets/css/pricing.css" rel="stylesheet" />
     <!-- <script src="./assets/js/prototype.js"></script> -->
-    <!-- <link rel="stylesheet" href="./assets/css/style.css" /> -->
+   <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
+  
   <body>
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="check2" viewBox="0 0 16 16">
@@ -148,89 +149,58 @@
     </svg>
 
     <div class="container-fluid py-3">
-      <header class="Head d-flex align-items-center">
-        <div
-          class="d-flex flex-row align-items-left pb-3 mb-4 border-bottom"
-        >
-          <a href="./index.html">
-            <img
-              style="height: 100px; width: 200px"
-              class="headImg"
-              src="./Images/png/pennies.png"
-              alt="Penny Pinchers Logo"
-            />
-          </a>
-
-          <div
-          class="d-flex flex-row"
-        >
-          <h1>Penny <span style="color: burlywood">Pinchers</span></h1>
-
-          <nav class="d-inline-flex">
-            <a
-              class="me-3 pb-4 link-body-emphasis text-decoration-none"
-              href="#"
-              ><span style="color: burlywood">Home</span></a
-            >
-            <a
-              class="me-3 link-body-emphasis text-decoration-none"
-              href="./product.html"
-              ><span style="color: burlywood">Products</span></a
-            >
-
-            <a
-              class="me-3 link-body-emphasis text-decoration-none"
-              href="./cart.html"
-              ><span style="color: burlywood">Checkout</span></a
-            >
-          </nav>
-          <form id="userinfo">
-            <span style="color: burlywood"
-              ><label for="name">Name:</label></span
-            >
-            <div class="text-center">
-              <input type="text" id="name" name="name" /><br /><br />
-            </div>
-
-            <span style="color: burlywood"
-              ><label for="email">Email:</label></span
-            >
-            <div class="text-center">
-              <input type="email" id="email" name="email" /><br /><br />
-            </div>
-
-            <div class="text-center">
+      <header >
+        <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+          <!-- <a href="/" class="d-flex align-items-center link-body-emphasis text-decoration-none">-->
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94" role="img">
+              <title>Penny Pinchers</title>
+            </svg>
+            <img class="headImg" src="./Images/png/pennies.png" alt="Penny Pinchers Logo"/>
+            <span class="fs-4" style="margin-left:5px">Penny Pinchers</span>
+          <!--</a>-->
+          <div id="loginFrm">
+            <form id="userinfo">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" />
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" />
               <button type="submit">Submit</button>
-            </div>
-          </form>
+            </form>
+          </div>
+          <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+            <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#">Home</a>
+            <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="./product.html">Products</a>
+            <a class="py-2 link-body-emphasis text-decoration-none" href="./cart.html">Checkout</a>
+          </nav>
         </div>
       </header>
       <main>
-        <div id="catNav" style="width: 90%; text-align: center"></div>
+        <!-- category navigator -->
+        <div id="catNav">
+
+        </div>
 
         <!-- product card start here -->
-        <div
-          class="row row-cols-1 row-cols-md-3 mb-3 text-center"
-          id="products"
-        ></div>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center" id="products">
+
+        </div>
         <!-- end products -->
       </main>
-      <footer class="pt-4 my-md-5 pt-md-5 border-top"></footer>
-      <script src="./assets/js/script.js"></script>
-      <script src="./assets/js/prototype.js"></script>
+
     </div>
 
+    <!-- <footer class="pt-4 my-md-5 pt-md-5 border-top"></footer> --> 
     <footer>
-      <h3>
-        <h3 style="text-align: center">
+      <h3 style="text-align: center">
         © Penny Pincher
       </h3>
-      <h6>
-        <h6 style="text-align: center">
+      <h6 style="text-align: center">
         *Photos' displayed may not match actual product.
-        <a href="https://youtu.be/dQw4w9WgXcQ">&#10084;&#65039;</a>
+        <a style="text-decoration:none;" href="https://youtu.be/dQw4w9WgXcQ" target="_blank">&#10084;&#65039;</a>
       </h6>
     </footer>
 
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/prototype.js"></script>
   </body>
 </html>
